@@ -50,7 +50,7 @@ export default function Formulario({ pacientes, setPacientes }) {
 
       <p className="text-lg mt-5 text-center mb-10">
         Añade pacientes y {""}
-        <spa className="text-indigo-600 font-bold">Administrarlos</spa>
+        <span className="text-indigo-600 font-bold">Administrarlos</span>
       </p>
 
       <form
@@ -117,10 +117,7 @@ export default function Formulario({ pacientes, setPacientes }) {
         </div>
 
         <div className="mb-5">
-          <label
-            htmlFor="email"
-            className="email text-gray-700 uppercase font-bold"
-          >
+          <label htmlFor="alta" className="text-gray-700 uppercase font-bold">
             Alta
           </label>
 
@@ -129,8 +126,8 @@ export default function Formulario({ pacientes, setPacientes }) {
             type="date"
             placeholder="Email Contacto Propietario"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={fecha}
+            onChange={(e) => setFecha(e.target.value)}
           />
         </div>
 
@@ -152,7 +149,7 @@ export default function Formulario({ pacientes, setPacientes }) {
         <input
           type="submit"
           className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer"
-          value={error}
+          value={"Agregar Paciente"}
           onChange={(e) => setError(e.target.value)}
         />
       </form>
